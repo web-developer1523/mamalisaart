@@ -1,0 +1,93 @@
+{% schema %}
+{
+  "name": "Custom Banner Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "MAMA LISA"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Canvas Info Text",
+      "default": "LIMITED EDITION CANVAS PRINT"
+    },
+    {
+      "type": "text",
+      "id": "size_text",
+      "label": "Canvas Size Text",
+      "default": "18\" X 24\""
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "ORDER"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Banner Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "below_image",
+      "label": "Below Section Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Banner"
+    }
+  ]
+}
+{% endschema %}
+
+
+<section class="hero-section">
+  <div class="container">
+    <section class="overlap-section">
+      <div class="text-content">
+        <h2>
+          {{ section.settings.heading }}
+        </h2>
+        <p class="canvas_info">
+          {{ section.settings.subtext }}
+        </p>
+        <p class="canvas_size">
+          {{ section.settings.size_text }}
+        </p>
+         <div class="button-container mob_btn">
+        <a class="cta-button" href="{{ section.settings.button_link }}">
+          {{ section.settings.button_text }}
+        </a>
+      </div>
+      </div>
+
+      <div class="image-container">
+        {% if section.settings.main_image != blank %}
+          <img src="{{ section.settings.main_image | img_url: 'master' }}" alt="{{ section.settings.heading }}">
+        {% endif %}
+      </div>
+ <div class="button-container">
+        <a class="cta-button" href="{{ section.settings.button_link }}">
+          {{ section.settings.button_text }}
+        </a>
+      </div>
+     
+    </section>
+  </div>
+</section>
+
+<section class="below-section">
+  {% if section.settings.below_image != blank %}
+    <img src="{{ section.settings.below_image | img_url: 'master' }}" alt="">
+  {% endif %}
+</section>

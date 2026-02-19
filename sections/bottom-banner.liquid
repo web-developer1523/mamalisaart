@@ -1,0 +1,49 @@
+{% schema %}
+{
+  "name": "Bottom Banner Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Background Image"
+    },
+    {
+      "type": "text",
+      "id": "banner_heading",
+      "label": "Heading Text",
+      "default": "YOUR CUSTOM HEADING"
+    },
+    {
+      "type": "richtext",
+      "id": "banner_description",
+      "label": "Description Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "CLICK HERE"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bottom Banner Section"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="bottom-banner" style="background-image: url('{{ section.settings.banner_image | img_url: 'master' }}');">
+  <div class="container">
+    <div class="banner-content">
+      <h3>{{ section.settings.banner_heading }}</h3>
+      <p>{{ section.settings.banner_description }}</p>
+      <a href="{{ section.settings.button_link }}" class="cta-button">{{ section.settings.button_text }}</a>
+    </div>
+  </div>
+</div>

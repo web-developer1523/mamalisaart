@@ -1,0 +1,197 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_nHjERm": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_QUphAq": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR MISSION",
+            "heading_size": "h1"
+          }
+        },
+        "text_CAzcAM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We merge art, culture, and impact to create work that honors heritage, sparks dialogue, and reclaims space for African aesthetics. By weaving tradition into contemporary form, we offer pieces that resonate across cultures and generations. Our mission is bringing African culture into everyday life through meaningful, modern design.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QUphAq",
+        "text_CAzcAM"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "custom_class": "cst-custom-about-image-with-text-1 cst-custom-about-comman bg_dark_abt",
+        "image": "shopify://shop_images/about-img1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_QdgN78": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_cMreXY": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR STORY",
+            "heading_size": "h1"
+          }
+        },
+        "text_yaCig3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Mama Lisa was born from a personal longing-a response to the absence of African stories and aesthetics in the everyday. Founder Lionel Njefi grew up in Cameroon, surrounded by tradition, spirit, and artistic richness. After moving to Europe and traveling across North America, he noticed how rarely African culture showed up in the spaces people live in. Mama Lisa was created to change that to bring heritage and identity into form through artful design that makes culture feel at home, wherever you are.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cMreXY",
+        "text_yaCig3"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "custom_class": "cst-custom-about-image-with-text-2 cst-custom-about-comman bg_light_abt",
+        "image": "shopify://shop_images/about-img2.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_Vtenrh": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_dYhN7D": {
+          "type": "heading",
+          "settings": {
+            "heading": "GIVING BACK, THROUGH WATER",
+            "heading_size": "h1"
+          }
+        },
+        "text_rmJPe4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We collaborate with artists and communities to create work rooted in cultural memory and expressed through contemporary form. Each piece brings African stories into everyday spaces-making beauty a bridge between people, place, and purpose.</p><p>As part of our commitment to meaningful connection, 5% of every sale supports Once Upon A Well, a nonprofit building boreholes and expanding access to clean water for schools in rural African communities. It's a quiet act of restoration-art in motion, flowing into something deeply human.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dYhN7D",
+        "text_rmJPe4"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "custom_class": "cst-custom-about-image-with-text-3 cst-custom-about-comman bg_dark_abt",
+        "image": "shopify://shop_images/about-img3.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_dGyKdM": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_7JdRYb": {
+          "type": "heading",
+          "settings": {
+            "heading": "VISIONARY ARTISTS & MAKERS WELCOME",
+            "heading_size": "h1"
+          }
+        },
+        "text_JdarbM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Art grows through dialogue, collaboration, and shared roots. We're always looking to connect with artists whose work honors culture, story, and transformation. If you feel aligned with Mama Lisa's vision-and want to be part of something that brings heritage to light in new ways-we'd love to hear from you. Reach out, share your work, or simply start a conversation.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_wK8yty": {
+          "type": "button",
+          "settings": {
+            "button_label": "GET IN TOUCH",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7JdRYb",
+        "text_JdarbM",
+        "button_wK8yty"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "custom_class": "cst-custom-about-image-with-text-4 cst-custom-about-comman bg_light_abt",
+        "image": "shopify://shop_images/about-img4.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_nHjERm",
+    "image_with_text_QdgN78",
+    "image_with_text_Vtenrh",
+    "image_with_text_dGyKdM"
+  ]
+}

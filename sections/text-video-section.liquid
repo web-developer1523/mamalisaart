@@ -1,0 +1,79 @@
+<div class="{{ section.settings.custom_class }} img_txt_sec from_cam_to_world">
+  <div class="container">
+    <div
+      class="img_text_wrap"
+      style="{% if section.settings.video_reverse != blank %}flex-direction:row-reverse;{% endif %}"
+    >
+      {% if section.settings.video != blank %}
+        <div class="txt_img">
+          <div class="custom-video-wrapper">
+            <video autoplay loop muted playsinline>
+              <source src="{{ section.settings.video.sources[1].url }}" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      {% endif %}
+      <div class="txt_prt">
+        <h3>
+          {{ section.settings.right_heading }}
+        </h3>
+        <p>
+          {{ section.settings.right_paragraph }}
+        </p>
+        {% if section.settings.btn_link != blank -%}
+          <a class="cta-button" href="{{ section.settings.btn_link }}">{{ section.settings.btn_text -}}</a>
+        {%- endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Text Video Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom class"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video"
+    },
+    {
+      "type": "checkbox",
+      "id": "video_reverse",
+      "label": "Video position left/right",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "right_heading",
+      "label": "Heading Text",
+      "default": "FROM CAMEROON TO THE WORLD"
+    },
+    {
+      "type": "textarea",
+      "id": "right_paragraph",
+      "label": "Paragraph Text",
+      "default": "Lionel Njefi grew up in Cameroon — a country rich in tradition, spirit, and artistic beauty. After moving to Europe and traveling across North America, he noticed a quiet absence: African stories and aesthetics were missing from everyday spaces. Mama Lisa was founded to change that — to honor heritage and identity through artful design that brings culture home, wherever in the world you are."
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text Video Section"
+    }
+  ]
+}
+{% endschema %}

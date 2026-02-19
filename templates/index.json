@@ -1,0 +1,642 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "text_only_section_myitQA": {
+      "type": "text-only-section",
+      "disabled": true,
+      "settings": {
+        "text_heading": "<h3 class=\"text_head reimagining\">REIMAGINING</h3> <h3 class=\"text_head\">A TIMELESS ICON</h3>",
+        "text_description": "Mama Lisa is a tribute to the beauty, strength and quiet power of the African matriarch. She represents generations of women whose grace has shaped the very fabric of African culture and wisdom. This piece invites reflection on the mothers and women who carry the world."
+      }
+    },
+    "bottom_banner_KDkFqE": {
+      "type": "bottom-banner",
+      "disabled": true,
+      "name": "Bottom Banner Section",
+      "settings": {
+        "banner_image": "shopify://shop_images/eyes-of-the-continent-banner-mockup-1-short.png",
+        "banner_heading": "Unique Art By Artists Living In Africa",
+        "banner_description": "<p>Let Your Walls Tell Stories!</p>",
+        "button_link": "shopify://collections/all",
+        "button_text": "Discover"
+      }
+    },
+    "slideshow_QiLiim": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_CXyGV6": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/eyes-of-the-continent-banner-mockup-1.png",
+            "heading": "Unique Art By Artists Living In Africa",
+            "heading_size": "h1",
+            "subheading": "Let Your Walls Tell Stories!",
+            "button_label": "Discover",
+            "link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 40,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_8YXH6a": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/image_3_2.png",
+            "heading": "Unique Art By Artists Living In Africa",
+            "heading_size": "h1",
+            "subheading": "Let Your Walls Tell Stories!",
+            "button_label": "Discover",
+            "link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 40,
+            "color_scheme": "",
+            "text_alignment_mobile": "left"
+          }
+        },
+        "slide_8rdbg3": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/image_3_4.png",
+            "heading": "Wall Art With Impact",
+            "heading_size": "h1",
+            "subheading": "Let Your Walls Tell Stories!",
+            "button_label": "Discover",
+            "link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 40,
+            "color_scheme": "",
+            "text_alignment_mobile": "left"
+          }
+        },
+        "slide_jdhGMq": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/image_3_3.png",
+            "heading": "Beauty Beyond Art",
+            "heading_size": "h1",
+            "subheading": "Let Your Walls Tell Stories!",
+            "button_label": "Discover",
+            "link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 30,
+            "color_scheme": "",
+            "text_alignment_mobile": "left"
+          }
+        }
+      },
+      "block_order": [
+        "slide_CXyGV6",
+        "slide_8YXH6a",
+        "slide_8rdbg3",
+        "slide_jdhGMq"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "custom_class": "",
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 7,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "featured_collection_WtNiBh": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Best Sellers",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "all-products-1",
+        "products_to_show": 6,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-7a555173-da1f-475c-9f98-705c1b6c792b",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_banner_T9A7zU": {
+      "type": "custom-banner",
+      "disabled": true,
+      "settings": {
+        "heading": "MAMA LISA",
+        "subtext": "LIMITED EDITION CANVAS PRINT",
+        "size_text": "",
+        "button_link": "shopify://collections/all",
+        "button_text": "ORDER",
+        "main_image": "shopify://shop_images/banner.jpg",
+        "below_image": "shopify://shop_images/olivia-hutcherson-EMP0_-qfva8-unsplash.jpg"
+      }
+    },
+    "text_image_sec_j79P87": {
+      "type": "text-image-sec",
+      "custom_css": [
+        "@media screen and (max-width: 360px) {.cst-custom-reverse-image .img_text_wrap .txt_prt h3 {letter-spacing: 5px; font-size: 25px !important; }}"
+      ],
+      "name": "Image Text Section",
+      "settings": {
+        "custom_class": "cst-custom-reverse-image",
+        "image_reverse": false,
+        "right_heading": "ART THAT HONORS YOUR ROOTS",
+        "right_paragraph": "We curate meaningful artwork that speaks to the soul of the African diaspora. Each piece is a bridge—linking past and present, heritage and identity, Africa and the world. Whether it’s a quiet tribute to ancestral strength or a vibrant celebration of modern African artistry, our collection brings culture home. For those longing to feel seen, grounded, and connected—this is for you.",
+        "btn_text": "",
+        "btn_link": ""
+      }
+    },
+    "text_image_sec_izR3Up": {
+      "type": "text-image-sec",
+      "disabled": true,
+      "custom_css": [
+        ".txt_img img {object-fit: contain;}",
+        ".from_cam_to_world {padding-bottom: 0px;}"
+      ],
+      "name": "Image Text Section",
+      "settings": {
+        "custom_class": "",
+        "left_image": "shopify://shop_images/Ahmed_Partey.jpg",
+        "image_reverse": true,
+        "right_heading": "Made in Africa",
+        "right_paragraph": "Every piece in this collection is created by talented artists living across the African continent. By bringing their work into your home, you’re not only celebrating authentic African creativity—you’re directly supporting the artists and their communities.\n\n\nYour purchase goes beyond art. It fuels opportunity, sustains livelihoods, and helps us contribute to social impact projects such as providing clean water to schools across Africa.",
+        "btn_text": "View Collection",
+        "btn_link": "shopify://collections/made-in-africa"
+      }
+    },
+    "text_video_section_BD3LDh": {
+      "type": "text-video-section",
+      "name": "Text Video Section",
+      "settings": {
+        "custom_class": "cst-custom-video-section-homepage v2-sec for-1",
+        "video": "shopify://files/videos/Ahmed and ambali painting homepage.mp4",
+        "video_reverse": false,
+        "right_heading": "Made in Africa",
+        "right_paragraph": "Every piece in this collection is created by talented artists living across the African continent. By bringing their work into your home, you’re not only celebrating authentic African creativity—you’re directly supporting the artists and their communities.\n\n\nYour purchase goes beyond art. It fuels opportunity, sustains livelihoods, and helps us contribute to social impact projects such as providing clean water to schools across Africa.",
+        "btn_text": "View Collection",
+        "btn_link": "shopify://collections/all"
+      }
+    },
+    "text_video_section_qUdC9A": {
+      "type": "text-video-section",
+      "name": "Text Video Section",
+      "settings": {
+        "custom_class": "cst-custom-video-section-homepage v2-sec for-1",
+        "video": "shopify://files/videos/Homepage-vid Tunteya changed your space.mp4",
+        "video_reverse": false,
+        "right_heading": "THE CHANGE YOUR SPACE NEEDS!",
+        "right_paragraph": "",
+        "btn_text": "Order Now",
+        "btn_link": "shopify://collections/all"
+      }
+    },
+    "rich_text_Mk6Jz8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cFEKDw": {
+          "type": "heading",
+          "settings": {
+            "heading": "\"When the roots are deep, there is no reason to fear the wind.”",
+            "heading_size": "h1"
+          }
+        },
+        "text_qQUnLp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>AFRICAN PROVERB</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cFEKDw",
+        "text_qQUnLp"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "custom_class": "custom-women-sec",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "text_video_section_jnDxYX": {
+      "type": "text-video-section",
+      "disabled": true,
+      "name": "Text Video Section",
+      "settings": {
+        "custom_class": "cst-custom-video-section-homepage v1-sec",
+        "video": "shopify://files/videos/Homepage-vid Tunteya changed your space.mp4",
+        "video_reverse": true,
+        "right_heading": "THE CHANGE YOUR SPACE NEEDS!",
+        "right_paragraph": "Mama Lisa is a tribute to the beauty, strength and quiet power of the African matriarch. She represents generations of women whose grace has shaped the very fabric of African culture and wisdom. This piece invites reflection on the mothers and women who carry the world.",
+        "btn_text": "Order Now",
+        "btn_link": "shopify://collections/all"
+      }
+    },
+    "text_with_media_custom_9cEeVq": {
+      "type": "text-with-media-custom",
+      "custom_css": [
+        ".img_text_wrap {padding-top: 100px !important;}"
+      ],
+      "settings": {
+        "left_image": "shopify://shop_images/mrjn-photography-YpZ2cj4s0oo-unsplash.jpg",
+        "image_reverse": true,
+        "right_heading": "GIVING BACK, THROUGH WATER",
+        "right_paragraph": "Every piece you bring home from Mama Lisa supports something far greater: access to clean, life-sustaining water for children in rural African communities. We contribute 1% of our total revenue to Once Upon A Well, a nonprofit organization focused on building boreholes and creating sustainable water access for schools across underserved regions. A quiet, powerful act of restoration that flows from art into real-world impact. Thank you for being part of that."
+      }
+    },
+    "ucg_create_section_JbkFVi": {
+      "type": "UCG-create-section",
+      "blocks": {
+        "slide_xtcLLp": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/urban-royalty-product-mockup-2.png",
+            "brand": ""
+          }
+        },
+        "slide_fYddWK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/eyes-of-the-continent-product-mockup-2.png",
+            "brand": ""
+          }
+        },
+        "slide_T3UGLJ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mother-of-the-land-product-mockup-1.png",
+            "brand": ""
+          }
+        },
+        "slide_Lj8kcg": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/modern_fireplace_006_2.jpg",
+            "brand": ""
+          }
+        },
+        "slide_JNHhXL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Mockup20_2_9d5ca0d9-b7f9-4434-b0de-2acc65ca7d67.jpg",
+            "brand": ""
+          }
+        },
+        "slide_apBXnB": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/the-griots-wisdom-product-mockup-1.png",
+            "brand": ""
+          }
+        },
+        "slide_JBfRLY": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/pop_art_001_2.jpg",
+            "brand": ""
+          }
+        },
+        "slide_VhJ6d8": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/eyes-of-the-continent-product-mockup-1.png",
+            "brand": ""
+          }
+        },
+        "slide_AmUhmc": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/urban-royalty-product-mockup-1.png",
+            "brand": ""
+          }
+        },
+        "slide_aGgwUL": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/modern_fireplace_008_BW.jpg",
+            "brand": ""
+          }
+        },
+        "slide_LF9dLW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mother-of-the-land-product-mockup-2.png",
+            "brand": ""
+          }
+        },
+        "slide_Bm86h8": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/hallways_008_BW_c7efa686-a1c8-4c7d-a783-429d68c9230e.jpg",
+            "brand": ""
+          }
+        },
+        "slide_naTNaM": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/eyes-of-the-continent-product-mockup-4.png",
+            "brand": ""
+          }
+        },
+        "slide_qcfDcM": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/aurethia-frame26_6f747a56-0919-4780-bdfa-c596529e7f7f.jpg",
+            "brand": ""
+          }
+        },
+        "slide_KC9iXi": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/modern_fireplace_001_2.jpg",
+            "brand": ""
+          }
+        },
+        "slide_xb47qL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/pop_art_009_15bede5c-5693-4413-b76d-142b25d3be7f.jpg",
+            "brand": ""
+          }
+        },
+        "slide_ar8Umz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/pop_art_003.jpg",
+            "brand": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_xtcLLp",
+        "slide_fYddWK",
+        "slide_T3UGLJ",
+        "slide_Lj8kcg",
+        "slide_JNHhXL",
+        "slide_apBXnB",
+        "slide_JBfRLY",
+        "slide_VhJ6d8",
+        "slide_AmUhmc",
+        "slide_aGgwUL",
+        "slide_LF9dLW",
+        "slide_Bm86h8",
+        "slide_naTNaM",
+        "slide_qcfDcM",
+        "slide_KC9iXi",
+        "slide_xb47qL",
+        "slide_ar8Umz"
+      ],
+      "name": "UCG Section",
+      "settings": {
+        "title": "Get Inspired",
+        "subheading": "",
+        "btn_text": "Order now",
+        "btn_link": "shopify://collections/all"
+      }
+    },
+    "text_video_section_rzTJXe": {
+      "type": "text-video-section",
+      "disabled": true,
+      "name": "Text Video Section",
+      "settings": {
+        "custom_class": "cst-custom-video-section-homepage v2-sec for-2",
+        "video": "shopify://files/videos/Homepage-vid Taleesha favorite home find.mp4",
+        "video_reverse": false,
+        "right_heading": "YOUR FAVORITE HOME FIND",
+        "right_paragraph": "",
+        "btn_text": "Order Now",
+        "btn_link": "shopify://collections/all"
+      }
+    },
+    "text_video_section_D6NLDB": {
+      "type": "text-video-section",
+      "name": "Text Video Section",
+      "settings": {
+        "custom_class": "cst-custom-video-section-homepage v2-sec for-3",
+        "video": "shopify://files/videos/Homepage-vid All Men Timeless Art.mp4",
+        "video_reverse": false,
+        "right_heading": "YOUR SPACE YOUR STORY YOUR ART",
+        "right_paragraph": "",
+        "btn_text": "Order Now",
+        "btn_link": "shopify://collections/all"
+      }
+    },
+    "text_image_sec_reqb84": {
+      "type": "text-image-sec",
+      "custom_css": [
+        ".from_cam_to_world {padding-top: 0px; padding-bottom: 100px;}"
+      ],
+      "settings": {
+        "custom_class": "cst-custom-africa-world sec",
+        "left_image": "shopify://shop_images/DSCF8342.jpg",
+        "image_reverse": false,
+        "right_heading": "FROM AFRICA TO THE WORLD",
+        "right_paragraph": "Lionel Njefi grew up in Cameroon — a country rich in tradition, spirit, and artistic beauty. After moving to Europe and traveling across North America, he noticed a quiet absence: African stories and aesthetics were missing from everyday spaces. Mama Lisa was founded to change that — to honor heritage and identity through artful design that brings culture home, wherever in the world you are.",
+        "btn_text": "",
+        "btn_link": ""
+      }
+    },
+    "bottom_banner_zdPFXy": {
+      "type": "bottom-banner",
+      "disabled": true,
+      "settings": {
+        "banner_image": "shopify://shop_images/demo_image.jpg",
+        "banner_heading": "MAMA LISA",
+        "banner_description": "<p>CANVAS PRINT</p>",
+        "button_link": "shopify://products/mama-lisa-canvas",
+        "button_text": "Order Now"
+      }
+    },
+    "slideshow_EEP6Pd": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_PeJ4ih": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/demo_image.jpg",
+            "heading": "MAMA LISA",
+            "heading_size": "h1",
+            "subheading": "CANVAS PRINT",
+            "button_label": "Order Now",
+            "link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_4BUtnB": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/hallways_008_1.jpg",
+            "heading": "MAMA LISA",
+            "heading_size": "h1",
+            "subheading": "CANVAS PRINT",
+            "button_label": "Order Now",
+            "link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_e6haze": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mixed_2_009_BW.jpg",
+            "heading": "MAMA LISA",
+            "heading_size": "h1",
+            "subheading": "CANVAS PRINT",
+            "button_label": "Order Now",
+            "link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_rrYg4E": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mixed_2_007.jpg",
+            "heading": "MAMA LISA",
+            "heading_size": "h1",
+            "subheading": "CANVAS PRINT",
+            "button_label": "Order Now",
+            "link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_PeJ4ih",
+        "slide_4BUtnB",
+        "slide_e6haze",
+        "slide_rrYg4E"
+      ],
+      "disabled": true,
+      "settings": {
+        "custom_class": "cst-custom-bottom-banner-home",
+        "layout": "full_bleed",
+        "slide_height": "large",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": ""
+      }
+    },
+    "newsletter_grTqH8": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_zrBq8d": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join Our Family",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_CeK6gV": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Subscribe & get 10% off your first order!</p>"
+          }
+        },
+        "email_form_QXB7pb": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_zrBq8d",
+        "paragraph_CeK6gV",
+        "email_form_QXB7pb"
+      ],
+      "settings": {
+        "custom-css": "cst-home-page-newsletter",
+        "color_scheme": "scheme-1131842a-0551-4ac5-a62e-eb4c69946559",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "text_only_section_myitQA",
+    "bottom_banner_KDkFqE",
+    "slideshow_QiLiim",
+    "featured_collection_WtNiBh",
+    "custom_banner_T9A7zU",
+    "text_image_sec_j79P87",
+    "text_image_sec_izR3Up",
+    "text_video_section_BD3LDh",
+    "text_video_section_qUdC9A",
+    "rich_text_Mk6Jz8",
+    "text_video_section_jnDxYX",
+    "text_with_media_custom_9cEeVq",
+    "ucg_create_section_JbkFVi",
+    "text_video_section_rzTJXe",
+    "text_video_section_D6NLDB",
+    "text_image_sec_reqb84",
+    "bottom_banner_zdPFXy",
+    "slideshow_EEP6Pd",
+    "newsletter_grTqH8"
+  ]
+}

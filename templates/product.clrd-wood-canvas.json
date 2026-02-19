@@ -1,0 +1,672 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "product_variant_CNypCH": {
+          "type": "product_variant",
+          "disabled": true,
+          "settings": {}
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "icon_with_text_zyLnpf": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "heading_1": "30 Day Guarantee",
+            "icon_2": "return",
+            "heading_2": "Hassle-free returns",
+            "icon_3": "truck",
+            "heading_3": "Free Shipping"
+          }
+        },
+        "collapsible_tab_X9itiV": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Delivery",
+            "icon": "plane",
+            "content": "<p>For orders from <strong>USA,Canada, or EU Countries</strong> we currently offer <strong>FREE Shipping </strong>with deiivery times of <strong>5-10 business days</strong>.</p><p>For all other countries, shipping is calculated at checkout and delivery times range between 10-20 business days</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_DarY8d": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Returns & Exchanges",
+            "icon": "return",
+            "content": "<p>We offer a 30-Day Money Back Guarantee. Please refer to our <a href=\"/policies/refund-policy\" title=\"Refund Policy\">Refund Policy</a> to find out more. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_RQdraa": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What's included?",
+            "icon": "box",
+            "content": "<p>Brand new High Quality, Eco-friendly Portrait with a greeting card for your Donation to <strong>Once Upon A Well</strong>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_VwWqjQ": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Donation & Social Impact",
+            "icon": "heart",
+            "content": "<p>1% of our complete revenue is donated to <strong>Once Upon A Well</strong>, an NGO that provides clean water to children in rural areas across Africa by digging bore holes on school campuses.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "variant_picker",
+        "product_variant_CNypCH",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "icon_with_text_zyLnpf",
+        "collapsible_tab_X9itiV",
+        "collapsible_tab_DarY8d",
+        "collapsible_tab_RQdraa",
+        "collapsible_tab_VwWqjQ"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "ucg_create_section_7qpgU3": {
+      "type": "UCG-create-section",
+      "blocks": {
+        "slide_CLgk6p": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Fritz_post_hang.png",
+            "brand": ""
+          }
+        },
+        "slide_z7TMtB": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Fritz_unbox.png",
+            "brand": ""
+          }
+        },
+        "slide_gpngCh": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Jordan_6x19_No_headline.png",
+            "brand": ""
+          }
+        },
+        "slide_dizYKD": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Tunteya_complete_6x19_4651690b-3942-4eae-913d-be2f7528ab0b.png",
+            "brand": ""
+          }
+        },
+        "slide_YpYBmG": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Tunteya_-Complete_6x19_9fe698cb-147c-4bce-a0f0-3f77cf036468.png",
+            "brand": ""
+          }
+        },
+        "slide_7tFikF": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Lio_zoom_out.png",
+            "brand": ""
+          }
+        },
+        "slide_WiYFVQ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Taleesha_6x19_45bd6111-d23b-45a7-8630-a727f1637d19.png",
+            "brand": ""
+          }
+        },
+        "slide_rfEKEc": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Taleesha-6x19.png",
+            "brand": ""
+          }
+        },
+        "slide_AUXmEK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Tunteya-complete_6x19_226d587c-df4d-4da7-9c0c-e1766074de13.png",
+            "brand": ""
+          }
+        },
+        "slide_ck9iNb": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Tunteya-complete_-6x19.png",
+            "brand": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_CLgk6p",
+        "slide_z7TMtB",
+        "slide_gpngCh",
+        "slide_dizYKD",
+        "slide_YpYBmG",
+        "slide_7tFikF",
+        "slide_WiYFVQ",
+        "slide_rfEKEc",
+        "slide_AUXmEK",
+        "slide_ck9iNb"
+      ],
+      "name": "UCG Section",
+      "settings": {
+        "title": "At Home With Mama Lisa",
+        "subheading": "",
+        "btn_text": "",
+        "btn_link": ""
+      }
+    },
+    "multirow_Vjm4ez": {
+      "type": "multirow",
+      "blocks": {
+        "row_T8wLY7": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/MaLi_product_wood_hang_feature.png",
+            "caption": "",
+            "heading": "Easy Hanging",
+            "text": "<p>The integrated hanging system and soft rubber dots at the frame corners provide simple and secure installation, allowing immediate enjoyment of your artwork.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_Yfkn7C": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/MaLi_product_wood_durability_feature.png",
+            "caption": "",
+            "heading": "High-Quality Material",
+            "text": "<p>The canvas is made from a durable cotton-polyester blend (9.82 oz/yd²), ensuring excellent longevity and protecting your investment.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_aQq6WK": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/MaLi_product_stretch_sustainability_feature.png",
+            "caption": "",
+            "heading": "Sustainable Frame",
+            "text": "<p>Made from Radiata pine wood from renewable forests, the frame supports sustainable forestry and protects the environment.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_CCTJMj": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/MaLi_impact_clrd_product_page.png",
+            "caption": "",
+            "heading": "Social Impact",
+            "text": "<p>Your purchase helps bring clean water to children in rural schools across Africa. Every purchase contributes to the donation made to <strong>Once Upon A Well</strong>.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_bA9X88": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/clrd-slow-aging.png",
+            "caption": "",
+            "heading": "Long-Lasting Print",
+            "text": "<p>The special coating guarantees vibrant, long-lasting prints that draw attention and elevate your home decor.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_Yt6ecV": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/clrd-wood-size_variants.png",
+            "caption": "",
+            "heading": "Variety of Sizes",
+            "text": "<p>Available in various sizes from 20\"x30\" to 32\"x48\", you'll always find the perfect canvas for your space to create the ideal accent.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_T8wLY7",
+        "row_Yfkn7C",
+        "row_aQq6WK",
+        "row_CCTJMj",
+        "row_bA9X88",
+        "row_Yt6ecV"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_MW4Meh": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_P4QpWR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Happy Customers Say It Best",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_P4QpWR"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "custom_class": "custm",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "ucg_product_section_YVg4pD": {
+      "type": "UCG-product-section",
+      "blocks": {
+        "slide_xt4dbh": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/modern_fireplace_006_2.jpg",
+            "brand": ""
+          }
+        },
+        "slide_X98TKT": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Mockup20_2_9d5ca0d9-b7f9-4434-b0de-2acc65ca7d67.jpg",
+            "brand": ""
+          }
+        },
+        "slide_TKRB9y": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/pop_art_001_2.jpg",
+            "brand": ""
+          }
+        },
+        "slide_n7aarE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/modern_fireplace_008_BW.jpg",
+            "brand": ""
+          }
+        },
+        "slide_HWahim": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/hallways_008_BW_c7efa686-a1c8-4c7d-a783-429d68c9230e.jpg",
+            "brand": ""
+          }
+        },
+        "slide_jQWVUF": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/aurethia-frame26_6f747a56-0919-4780-bdfa-c596529e7f7f.jpg",
+            "brand": ""
+          }
+        },
+        "slide_VVUpmE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/modern_fireplace_001_2.jpg",
+            "brand": ""
+          }
+        },
+        "slide_exHjpH": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/pop_art_009_15bede5c-5693-4413-b76d-142b25d3be7f.jpg",
+            "brand": ""
+          }
+        },
+        "slide_RMDzik": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/pop_art_003.jpg",
+            "brand": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_xt4dbh",
+        "slide_X98TKT",
+        "slide_TKRB9y",
+        "slide_n7aarE",
+        "slide_HWahim",
+        "slide_jQWVUF",
+        "slide_VVUpmE",
+        "slide_exHjpH",
+        "slide_RMDzik"
+      ],
+      "name": "UCG Product Section",
+      "settings": {
+        "custom_class": "cst-custom-ugc-product-section",
+        "title": "Get Inspired",
+        "subheading": "",
+        "btn_text": "Order now",
+        "btn_link": "shopify://collections/all"
+      }
+    },
+    "review_richtext_rep3Xr": {
+      "type": "review-richtext",
+      "blocks": {
+        "heading_AH73bm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Happy Customers Say It Best",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_AH73bm"
+      ],
+      "settings": {
+        "custom_class": "",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_JfzTX9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4VhchK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Promise To You",
+            "heading_size": "h1"
+          }
+        },
+        "text_BFbzjY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We know you'll love our products and how they make you feel, but if for any reason you don't, we offer a 30-day money back guarantee. Just contact us and we'll take care of your purchase!</p><p>We also donate 1% of our total revenue to <a href=\"https://www.onceuponawell.org\" target=\"_blank\" title=\"https://www.onceuponawell.org\"><strong>Once Upon a Well.</strong></a></p>"
+          }
+        },
+        "button_pNRBzh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Now",
+            "button_link": "shopify://collections/portraits",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_4VhchK",
+        "text_BFbzjY",
+        "button_pNRBzh"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "custom_class": "custm",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collapsible_content_TGWgDx": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_ErFzNb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How easy is it to hang?",
+            "icon": "check_mark",
+            "row_content": "<p>Very easy! Each canvas comes with an integrated hanging system and soft rubber dots for added stability.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CqeEfP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is the material durable?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes, the canvas is made from a durable cotton-polyester blend with a special coating for long-lasting prints.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_gmejRB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What sizes are available?",
+            "icon": "check_mark",
+            "row_content": "<p>Mama Lisa is available in sizes from 20\"x30\" to 32\"x48\".</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_hfEByQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is the frame eco-friendly?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes, the frame is made from sustainably sourced Radiata pine wood from renewable forests</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qVqnVz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do the colors stay vibrant for long?",
+            "icon": "check_mark",
+            "row_content": "<p>Thanks to the proprietary coating, the colors remain vibrant and do not fade. Canvas are printed using latex inks that are non-hazardous, non-toxic, non-flammable.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xyDy9L": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use the canvas in different rooms?",
+            "icon": "check_mark",
+            "row_content": "<p>Absolutely! Simply choose the appropriate size for your space.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_yx6Cd9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes Mama Lisa so special?",
+            "icon": "check_mark",
+            "row_content": "<p>Mama Lisa is a unique artwork that embodies the beauty and majesty of royalty in the African culture, adding a special touch to your home and reminding you of the beauty royalty in you.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_ErFzNb",
+        "collapsible_row_CqeEfP",
+        "collapsible_row_gmejRB",
+        "collapsible_row_hfEByQ",
+        "collapsible_row_qVqnVz",
+        "collapsible_row_xyDy9L",
+        "collapsible_row_yx6Cd9"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQ (Frequently Asked Questions)",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "multicolumn_e88xRe": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_gUcN3n": {
+          "type": "column",
+          "settings": {
+            "title": "Kiana F.",
+            "text": "<p><em>\"Excellent quality and beautiful design. Easy to mount.\"</em></p><p>⭐⭐⭐⭐⭐</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GgwrWP": {
+          "type": "column",
+          "settings": {
+            "title": "Jamal P.",
+            "text": "<p><em>\"Mama Lisa added a special touch to my space.\"</em></p><p>⭐⭐⭐⭐⭐</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bA7JPG": {
+          "type": "column",
+          "settings": {
+            "title": "Tamika S.",
+            "text": "<p><em>\"The picture is a real eye-catcher. Everyone asks where I got it.\"</em></p><p>⭐⭐⭐⭐⭐</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_gUcN3n",
+        "column_GgwrWP",
+        "column_bA7JPG"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Happy Customers Say It Best",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ucg_create_section_7qpgU3",
+    "multirow_Vjm4ez",
+    "rich_text_MW4Meh",
+    "ucg_product_section_YVg4pD",
+    "review_richtext_rep3Xr",
+    "rich_text_JfzTX9",
+    "collapsible_content_TGWgDx",
+    "related-products",
+    "multicolumn_e88xRe"
+  ]
+}

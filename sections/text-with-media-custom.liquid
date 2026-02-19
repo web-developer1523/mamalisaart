@@ -1,0 +1,57 @@
+<div class="img_txt_sec from_cam_to_world custom-boxx">
+  <div class="container">
+    <div
+      class="img_text_wrap"
+      style="{% if section.settings.image_reverse != blank %}flex-direction:row-reverse;{% endif %}"
+    >
+      {% if section.settings.left_image != blank %}
+        <div class="txt_img">
+          <img src="{{ section.settings.left_image | img_url: 'master' }}" alt="{{ section.settings.right_heading }}">
+        </div>
+      {% endif %}
+      <div class="txt_prt">
+        <h3>
+          {{ section.settings.right_heading }}
+        </h3>
+        <p>
+          {{ section.settings.right_paragraph }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Image Text media Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Left Side Image"
+    },
+        {
+      "type": "checkbox",
+      "id": "image_reverse",
+      "label": "Image position left/right",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "right_heading",
+      "label": "Heading Text",
+      "default": "GIVING BACK, THROUGH WATER"
+    },
+    {
+      "type": "textarea",
+      "id": "right_paragraph",
+      "label": "Paragraph Text",
+      "default": "Every piece you bring home from Mama Lisa supports something far greater: access to clean, life-sustaining water for children in rural African communities. We contribute 5% of every sale to Once Upon A Well, a nonprofit organization focused on building boreholes and creating. sustainable water access for schools across underserved regions. A quiet, powerful act of restoration that flows from art into real-world impact. Thank you for being part of that."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Text Block"
+    }
+  ]
+}
+{% endschema %}

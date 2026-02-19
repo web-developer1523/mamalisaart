@@ -1,0 +1,94 @@
+{% if product.metafields.custom.artist_data and product.metafields.custom.artist_data.value != blank %}
+<div class="{{ section.settings.custom_class }} img_txt_sec from_cam_to_world">
+    <div class="container page-width">
+      <div
+        class="img_text_wrap"
+        style="{% if section.settings.image_reverse != blank %}flex-direction:row-reverse;{% endif %}"
+      >
+        {% if section.settings.left_image != blank %}
+          <div class="txt_img">
+            <img src="{{ section.settings.left_image | img_url: 'master' }}" alt="{{ section.settings.right_heading }}">
+          </div>
+        {% endif %}
+        <div class="txt_prt">
+          <h3>
+            {{ section.settings.right_heading }}
+          </h3>
+          <p>
+            {{ section.settings.right_paragraph }}
+          </p>
+          {% if section.settings.btn_link != blank -%}
+            <a class="cta-button" href="{{ section.settings.btn_link }}">{{ section.settings.btn_text -}}</a>
+          {%- endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .from_cam_to_world {
+        background: #fff;
+        padding: 70px 0;
+    }
+    .txt_img img {
+      height: 100%;
+      border-radius: 20px;
+      max-height: 100%;
+  }
+  @media only screen and (max-width: 749px) {
+    .img_text_wrap {
+      flex-direction: column!important;
+      gap: 20px;
+  }
+  }
+    </style>
+{% endif %}
+  {% schema %}
+  {
+    "name": "Artist Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "custom_class",
+        "label": "Custom class"
+      },
+      {
+        "type": "image_picker",
+        "id": "left_image",
+        "label": "Left Side Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "image_reverse",
+        "label": "Image position left/right",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "right_heading",
+        "label": "Heading Text",
+        "default": "FROM CAMEROON TO THE WORLD"
+      },
+      {
+        "type": "richtext",
+        "id": "right_paragraph",
+        "label": "Paragraph Text",
+      },
+      {
+        "type": "text",
+        "id": "btn_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Artist Section"
+      }
+    ]
+  }
+  {% endschema %}
+  

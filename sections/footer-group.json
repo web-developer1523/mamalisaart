@@ -1,0 +1,70 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "brand_information_MgwKT3": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": false
+          }
+        },
+        "link_list_FV6Wqd": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Main Menu",
+            "menu": "footer"
+          }
+        },
+        "link_list_B8H3KH": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "policy-menu"
+          }
+        },
+        "social_JRE3Ab": {
+          "type": "social",
+          "settings": {
+            "social_heading": "<p>Social</p>",
+            "show_social": true
+          }
+        }
+      },
+      "block_order": [
+        "brand_information_MgwKT3",
+        "link_list_FV6Wqd",
+        "link_list_B8H3KH",
+        "social_JRE3Ab"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": false,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 52,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

@@ -1,0 +1,36 @@
+{% schema %}
+{
+  "name": "Home Only Text Section",
+  "settings": [
+    {
+      "type": "html",
+      "id": "text_heading",
+      "label": "Section Heading",
+      "default": "REIMAGINING OF A TIMELESS ICON"
+    },
+    {
+      "type": "textarea",
+      "id": "text_description",
+      "label": "Section Description",
+      "default": "Mama Lisa is a tribute to the beauty, strength and quiet power of the African matriarch. She represents generations of women whose grace have shaped the very fabric of African culture and wisdom. This piece invites reflection on the mothers and women who carry the world."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Text Block"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="home_only_text_sec">
+  <div class="container">
+    <div class="text_wrap">
+      {{ section.settings.text_heading }}
+
+      <p class="text_desc">
+        {{ section.settings.text_description }}
+      </p>
+    </div>
+  </div>
+</div>
