@@ -370,6 +370,7 @@
         },
         "collapsible_row_KENAbU": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "What sizes are available?",
             "icon": "check_mark",
@@ -407,9 +408,9 @@
         "collapsible_row_XLHmhB": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What makes Mama Lisa so special?",
+            "heading": "What makes this so special?",
             "icon": "check_mark",
-            "row_content": "<p>Mama Lisa is a unique artwork that embodies the beauty and majesty of royalty in the African culture, adding a special touch to your home and reminding you of the beauty royalty in you.</p>",
+            "row_content": "<p>On Afro Secrets you find unique artworks that embody the beauty and majesty of the African culture, adding a special touch to your home, thus reminding YOU of the beauty in YOU.</p>",
             "page": ""
           }
         }

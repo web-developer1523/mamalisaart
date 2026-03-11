@@ -125,6 +125,15 @@
       "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
       "inventory_out_of_stock": "Out of stock",
       "inventory_out_of_stock_continue_selling": "In stock",
+      "urgency": {
+        "limited_edition": "Limited Edition Print",
+        "only_left": "Only {{ quantity }} left in stock",
+        "selling_fast": "Popular - Selling Fast"
+      },
+      "countdown_timer": {
+        "ends_in": "Ends in",
+        "ended": "Ended"
+      },
       "sku": "SKU",
       "on_sale": "Sale",
       "product_variants": "Product variants",

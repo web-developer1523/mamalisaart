@@ -2326,6 +2326,92 @@
             },
             "heading_3": {
               "label": "Third heading"
+            },
+            "icon_4": {
+              "label": "Fourth icon"
+            },
+            "image_4": {
+              "label": "Fourth image"
+            },
+            "heading_4": {
+              "label": "Fourth heading"
+            },
+            "icon_5": {
+              "label": "Fifth icon"
+            },
+            "image_5": {
+              "label": "Fifth image"
+            },
+            "heading_5": {
+              "label": "Fifth heading"
+            },
+            "icon_6": {
+              "label": "Sixth icon"
+            },
+            "image_6": {
+              "label": "Sixth image"
+            },
+            "heading_6": {
+              "label": "Sixth heading"
+            }
+          }
+        },
+        "payment_icons": {
+          "name": "Payment method icons",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "alignment": {
+              "label": "Alignment",
+              "options__1": {
+                "label": "Left"
+              },
+              "options__2": {
+                "label": "Center"
+              },
+              "options__3": {
+                "label": "Right"
+              }
+            },
+            "icon_size": {
+              "label": "Icon size",
+              "options__1": {
+                "label": "Small"
+              },
+              "options__2": {
+                "label": "Medium"
+              },
+              "options__3": {
+                "label": "Large"
+              }
+            }
+          }
+        },
+        "urgency": {
+          "name": "Urgency",
+          "settings": {
+            "enable_limited_edition": {
+              "label": "Limited Edition Print"
+            },
+            "enable_low_stock": {
+              "label": "Only X left in stock"
+            },
+            "enable_selling_fast": {
+              "label": "Popular - Selling Fast"
+            },
+            "low_stock_threshold": {
+              "label": "Show low stock when quantity is at or below",
+              "info": "Only applies to \"Only X left in stock\". Inventory must be tracked in Shopify."
+            }
+          }
+        },
+        "countdown_timer": {
+          "name": "Countdown timer",
+          "settings": {
+            "countdown_end_date": {
+              "label": "End date",
+              "info": "Format: YYYY-MM-DD (e.g. 2026-12-31). Countdown ends at 11:59 PM."
             }
           }
         }
@@ -2337,6 +2423,9 @@
         },
         "enable_sticky_info": {
           "label": "Enable sticky content on desktop"
+        },
+        "enable_sticky_add_to_cart_mobile": {
+          "label": "Sticky Add to Cart on mobile"
         },
         "gallery_layout": {
           "label": "Desktop layout",

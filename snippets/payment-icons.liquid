@@ -1,0 +1,52 @@
+{% comment %}
+  Renders payment method icons (Visa, Mastercard, PayPal, etc.) in a horizontal row.
+  Uses the shop's enabled payment types from Shopify admin.
+
+  Accepts:
+  - block: {Object} Block object with settings (optional heading, alignment, icon_size).
+
+  Usage:
+  {% render 'payment-icons', block: block %}
+{% endcomment %}
+{%- liquid
+  assign alignment = block.settings.alignment | default: 'left'
+  assign icon_size = block.settings.icon_size | default: 'medium'
+-%}
+{%- if shop.enabled_payment_types.size > 0 -%}
+  {{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
+  <style>
+    .product-payment-icons { margin-top: 1rem; margin-bottom: 0; }
+    .product-payment-icons__heading { margin-bottom: 0.6rem; opacity: 0.85; }
+    .product-payment-icons__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.75rem;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .product-payment-icons--center .product-payment-icons__list { justify-content: center; }
+    .product-payment-icons--right .product-payment-icons__list { justify-content: flex-end; }
+    .product-payment-icons--left .product-payment-icons__list { justify-content: flex-start; }
+    .product-payment-icons__item { display: flex; align-items: center; }
+    .product-payment-icons__item .icon { height: 1.8rem; width: auto; }
+    .product-payment-icons--small .product-payment-icons__item .icon { height: 1.4rem; }
+    .product-payment-icons--large .product-payment-icons__item .icon { height: 2.2rem; }
+  </style>
+  <div
+    class="product-payment-icons product-payment-icons--{{ alignment }} product-payment-icons--{{ icon_size }}"
+    {{ block.shopify_attributes }}
+  >
+    {%- if block.settings.heading != blank -%}
+      <p class="product-payment-icons__heading caption">{{ block.settings.heading }}</p>
+    {%- endif -%}
+    <ul class="list list-payment product-payment-icons__list" role="list">
+      {%- for type in shop.enabled_payment_types -%}
+        <li class="list-payment__item product-payment-icons__item">
+          {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+{%- endif -%}

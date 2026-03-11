@@ -1,0 +1,174 @@
+{% comment %}
+  Sticky Add to Cart bar - mobile only. Shows product image, title, price, Add to cart button.
+  Submits the main product form when the button is clicked.
+
+  Accepts:
+  - product: Product object
+  - section_id: Section id (for form target)
+  - product_form_id: Main product form id (e.g. product-form-123)
+
+  Usage: {% render 'sticky-add-to-cart', product: product, section_id: section.id, product_form_id: product_form_id %}
+{% endcomment %}
+{%- assign variant = product.selected_or_first_available_variant -%}
+{%- assign form_id = product_form_id | default: 'product-form-' | append: section_id -%}
+<div
+  class="sticky-add-to-cart"
+  id="sticky-add-to-cart-{{ section_id }}"
+  data-section-id="{{ section_id }}"
+  data-form-id="{{ form_id }}"
+  hidden
+>
+  <div class="sticky-add-to-cart__inner page-width">
+    {%- if product.featured_media -%}
+      <div class="sticky-add-to-cart__media">
+        <img
+          src="{{ product.featured_media | image_url: width: 80 }}"
+          alt="{{ product.featured_media.alt | escape }}"
+          width="40"
+          height="40"
+          loading="lazy"
+        >
+      </div>
+    {%- endif -%}
+    <div class="sticky-add-to-cart__info">
+      <span class="sticky-add-to-cart__title">{{ product.title | escape }}</span>
+      <span class="sticky-add-to-cart__price">
+        {%- render 'price', product: product, use_variant: true, price_class: '' -%}
+      </span>
+    </div>
+    <div class="sticky-add-to-cart__actions">
+      <button
+        type="button"
+        class="sticky-add-to-cart__button button button--primary"
+        data-sticky-atc-trigger
+        {% if variant.available == false %}disabled{% endif %}
+      >
+        <span class="sticky-add-to-cart__button-text">
+          {%- if variant.available -%}
+            {{ 'products.product.add_to_cart' | t }}
+          {%- else -%}
+            {{ 'products.product.sold_out' | t }}
+          {%- endif -%}
+        </span>
+        <span class="sticky-add-to-cart__button-spinner loading__spinner hidden" aria-hidden="true">
+          <svg class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+<style>
+  .sticky-add-to-cart {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgb(var(--color-background));
+    border-top: 1px solid rgba(var(--color-foreground), 0.1);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+    padding: 0.8rem 0;
+    display: none;
+  }
+  @media screen and (max-width: 749px) {
+    .sticky-add-to-cart:not([hidden]) { display: block; }
+    body.sticky-add-to-cart-visible { padding-bottom: 72px; }
+  }
+  @media screen and (min-width: 750px) {
+    .sticky-add-to-cart { display: none !important; }
+  }
+  .sticky-add-to-cart__inner {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .sticky-add-to-cart__media {
+    flex-shrink: 0;
+  }
+  .sticky-add-to-cart__media img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  .sticky-add-to-cart__info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .sticky-add-to-cart__title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .sticky-add-to-cart__price { font-size: 0.85rem; }
+  .sticky-add-to-cart__price .price { margin: 0; }
+  .sticky-add-to-cart__actions { flex-shrink: 0; }
+  .sticky-add-to-cart__button {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+    position: relative;
+  }
+  .sticky-add-to-cart__button.loading .sticky-add-to-cart__button-text { opacity: 0; }
+  .sticky-add-to-cart__button-spinner {
+    position: absolute;
+    inset: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sticky-add-to-cart__button-spinner.hidden { display: none !important; }
+  .sticky-add-to-cart__button-spinner .spinner {
+    width: 22px;
+    height: 22px;
+    animation: sticky-atc-spin 0.8s linear infinite;
+  }
+  .sticky-add-to-cart__button-spinner .path { stroke: currentColor; stroke-linecap: round; }
+  @keyframes sticky-atc-spin { to { transform: rotate(360deg); } }
+</style>
+<script>
+  (function() {
+    var bar = document.getElementById('sticky-add-to-cart-{{ section_id }}');
+    if (!bar) return;
+    var formId = bar.getAttribute('data-form-id');
+    var trigger = bar.querySelector('[data-sticky-atc-trigger]');
+    var productInfo = document.getElementById('ProductInfo-{{ section_id }}');
+    function isMobile() { return window.innerWidth < 750; }
+    function onScroll() {
+      if (!isMobile()) { bar.setAttribute('hidden', ''); document.body.classList.remove('sticky-add-to-cart-visible'); return; }
+      if (!productInfo) { bar.removeAttribute('hidden'); document.body.classList.add('sticky-add-to-cart-visible'); return; }
+      var rect = productInfo.getBoundingClientRect();
+      var showWhenBottomAbove = 180;
+      if (rect.bottom < showWhenBottomAbove) { bar.removeAttribute('hidden'); document.body.classList.add('sticky-add-to-cart-visible'); }
+      else { bar.setAttribute('hidden', ''); document.body.classList.remove('sticky-add-to-cart-visible'); }
+    }
+    window.addEventListener('scroll', function() { requestAnimationFrame(onScroll); }, { passive: true });
+    window.addEventListener('resize', onScroll);
+    if (trigger) {
+      var spinnerEl = bar.querySelector('.sticky-add-to-cart__button-spinner');
+      var textEl = bar.querySelector('.sticky-add-to-cart__button-text');
+      function setLoading(loading) {
+        trigger.disabled = loading;
+        trigger.classList.toggle('loading', loading);
+        if (spinnerEl) spinnerEl.classList.toggle('hidden', !loading);
+      }
+      trigger.addEventListener('click', function() {
+        var submitBtn = document.getElementById('ProductSubmitButton-{{ section_id }}');
+        if (!submitBtn || submitBtn.disabled) return;
+        setLoading(true);
+        submitBtn.click();
+        var done = function() { setLoading(false); };
+        if (typeof subscribe !== 'undefined' && typeof PUB_SUB_EVENTS !== 'undefined') {
+          var unsubCart = subscribe(PUB_SUB_EVENTS.cartUpdate, function() { done(); if (unsubCart) unsubCart(); });
+          subscribe(PUB_SUB_EVENTS.cartError, function() { done(); });
+        }
+        setTimeout(done, 4000);
+      });
+    }
+    onScroll();
+  })();
+</script>

@@ -1,0 +1,29 @@
+{% comment %}
+  Renders a countdown timer to a single end date (end of day).
+  Accepts: block with setting countdown_end_date (YYYY-MM-DD).
+
+  Usage: {% render 'product-countdown-timer', block: block %}
+{% endcomment %}
+{%- assign end_date = block.settings.countdown_end_date | strip -%}
+{%- if end_date != blank -%}
+{%- assign end_iso = end_date | append: 'T23:59:59' -%}
+{%- assign end_date_formatted = end_date | date: '%B %d, %Y' -%}
+{%- if end_date_formatted == blank -%}
+  {%- assign end_date_formatted = end_date -%}
+{%- endif -%}
+
+<div class="product-countdown-timer product__countdown-timer" {{ block.shopify_attributes }}>
+  <style>
+    .product-countdown-timer { margin: 0.75rem 0; padding: 0.5rem 0; color: rgb(var(--color-foreground)); }
+    .product-countdown-timer__text { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; }
+    .product-countdown-timer__value { font-weight: 500; }
+  </style>
+  <p class="product-countdown-timer__text">
+    <span class="product-countdown-timer__icon" aria-hidden="true">⏱</span>
+    <span>{{ 'products.product.countdown_timer.ends_in' | t }}</span>
+    <span class="product-countdown-timer__value product-countdown-timer__js" data-countdown-end="{{ end_iso }}" data-countdown-ended="{{ 'products.product.countdown_timer.ended' | t }}">
+      --
+    </span>
+  </p>
+</div>
+{%- endif -%}

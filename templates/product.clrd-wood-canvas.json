@@ -126,6 +126,19 @@
         "padding_bottom": 12
       }
     },
+    "artist_section_aMc9if": {
+      "type": "artist-section",
+      "name": "Artist Section",
+      "settings": {
+        "custom_class": "",
+        "left_image": "{{ product.metafields.custom.artist_data.value.image.value }}",
+        "image_reverse": true,
+        "right_heading": "{{ product.metafields.custom.artist_data.value.name.value }}",
+        "right_paragraph": "{{ product.metafields.custom.artist_data.value.text | metafield_tag }}",
+        "btn_text": "",
+        "btn_link": ""
+      }
+    },
     "ucg_create_section_7qpgU3": {
       "type": "UCG-create-section",
       "blocks": {
@@ -659,6 +672,7 @@
   },
   "order": [
     "main",
+    "artist_section_aMc9if",
     "ucg_create_section_7qpgU3",
     "multirow_Vjm4ez",
     "rich_text_MW4Meh",

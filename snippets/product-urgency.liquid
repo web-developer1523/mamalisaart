@@ -1,0 +1,62 @@
+{% comment %}
+  Renders light urgency messaging for product page (cold traffic conversion).
+  Options: Limited Edition, Only X left in stock, Popular - Selling Fast.
+
+  Accepts:
+  - block: Block with settings (enable_limited_edition, enable_low_stock, enable_selling_fast, low_stock_threshold)
+  - product: Product object
+
+  Usage:
+  {% render 'product-urgency', block: block, product: product %}
+{% endcomment %}
+{%- liquid
+  assign variant = product.selected_or_first_available_variant
+  assign inv_qty = variant.inventory_quantity
+  assign inv_managed = variant.inventory_management
+  assign threshold = block.settings.low_stock_threshold | default: 20
+  assign show_low_stock = false
+  if block.settings.enable_low_stock and inv_managed == 'shopify' and inv_qty != nil and inv_qty > 0 and inv_qty <= threshold
+    assign show_low_stock = true
+  endif
+  assign has_limited = block.settings.enable_limited_edition
+  assign has_selling_fast = block.settings.enable_selling_fast
+  assign any_visible = false
+  if has_limited or show_low_stock or has_selling_fast
+    assign any_visible = true
+  endif
+-%}
+{%- if any_visible -%}
+<div class="product-urgency product__urgency" data-urgency-block-id="{{ block.id }}" {{ block.shopify_attributes }}>
+  <style>
+    .product-urgency { margin: 0.75rem 0; padding: 0.5rem 0; color: rgb(var(--color-foreground)); }
+    .product-urgency__list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; flex-direction: column; gap: 0.5rem; }
+    .product-urgency__item { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; opacity: 0.95; color: inherit; text-decoration: none; }
+    .product-urgency__item .product-urgency__icon { flex-shrink: 0; }
+    .product-urgency__item--low_stock { color: rgb(180, 100, 0) !important; }
+    .product-urgency__item--limited_edition .product-urgency__icon,
+    .product-urgency__item--selling_fast .product-urgency__icon { opacity: 0.9; }
+  </style>
+  <ul class="product-urgency__list" role="list">
+    {%- if has_limited -%}
+      <li class="product-urgency__item product-urgency__item--limited_edition">
+        <span class="product-urgency__icon" aria-hidden="true">✦</span>
+        <span>{{ 'products.product.urgency.limited_edition' | t }}</span>
+      </li>
+    {%- endif -%}
+    {%- if show_low_stock -%}
+      <li class="product-urgency__item product-urgency__item--low_stock" id="urgency-inventory-{{ block.id }}">
+        <span class="product-urgency__icon" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M7 4v3l2 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </span>
+        <span>{{ 'products.product.urgency.only_left' | t: quantity: inv_qty }}</span>
+      </li>
+    {%- endif -%}
+    {%- if has_selling_fast -%}
+      <li class="product-urgency__item product-urgency__item--selling_fast">
+        <span class="product-urgency__icon" aria-hidden="true">🔥</span>
+        <span>{{ 'products.product.urgency.selling_fast' | t }}</span>
+      </li>
+    {%- endif -%}
+  </ul>
+</div>
+{%- endif -%}

@@ -6,10 +6,13 @@ if (!customElements.get('product-form')) {
         super();
 
         this.form = this.querySelector('form');
-        this.form.querySelector('[name=id]').disabled = false;
+        if (!this.form) return;
+        const idInput = this.form.querySelector('[name=id]');
+        if (idInput) idInput.disabled = false;
         this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
         this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
         this.submitButton = this.querySelector('[type="submit"]');
+        if (!this.submitButton) return;
 
         if (document.querySelector('cart-drawer')) this.submitButton.setAttribute('aria-haspopup', 'dialog');
 
@@ -18,19 +21,26 @@ if (!customElements.get('product-form')) {
 
       onSubmitHandler(evt) {
         evt.preventDefault();
-        if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
+        if (!this.submitButton || this.submitButton.getAttribute('aria-disabled') === 'true') return;
 
         this.handleErrorMessage();
 
         this.submitButton.setAttribute('aria-disabled', true);
         this.submitButton.classList.add('loading');
-        this.querySelector('.loading__spinner').classList.remove('hidden');
+        const spinner = this.querySelector('.loading__spinner');
+        if (spinner) spinner.classList.remove('hidden');
 
         const config = fetchConfig('javascript');
         config.headers['X-Requested-With'] = 'XMLHttpRequest';
         delete config.headers['Content-Type'];
 
         const formData = new FormData(this.form);
+        const idInput = this.form.querySelector('[name=id]');
+        if (!formData.has('id') && idInput) formData.append('id', idInput.value);
+        if (!formData.has('quantity') && this.form.id) {
+          const qtyInput = document.querySelector('input[name="quantity"][form="' + this.form.id + '"]');
+          if (qtyInput) formData.append('quantity', qtyInput.value || '1');
+        }
         if (this.cart) {
           formData.append(
             'sections',
@@ -92,10 +102,11 @@ if (!customElements.get('product-form')) {
             console.error(e);
           })
           .finally(() => {
-            this.submitButton.classList.remove('loading');
+            if (this.submitButton) this.submitButton.classList.remove('loading');
             if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
-            if (!this.error) this.submitButton.removeAttribute('aria-disabled');
-            this.querySelector('.loading__spinner').classList.add('hidden');
+            if (!this.error && this.submitButton) this.submitButton.removeAttribute('aria-disabled');
+            const spinnerEl = this.querySelector('.loading__spinner');
+            if (spinnerEl) spinnerEl.classList.add('hidden');
           });
       }
 

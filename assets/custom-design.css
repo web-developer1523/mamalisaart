@@ -130,8 +130,9 @@ header.header {
   text-align: right;
 }
 .cta-button:hover {
-  background-color: #fff;
-  color: #000;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid black;
 }
 .cta-button {
   display: inline-block;
