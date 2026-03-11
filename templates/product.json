@@ -39,6 +39,30 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "inventory_tJtzXm": {
+          "type": "inventory",
+          "disabled": true,
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 20,
+            "show_inventory_quantity": true
+          }
+        },
+        "countdown_timer_t9WeRg": {
+          "type": "countdown_timer",
+          "settings": {
+            "countdown_end_date": "2026-03-12"
+          }
+        },
+        "urgency_jQhr78": {
+          "type": "urgency",
+          "settings": {
+            "enable_limited_edition": true,
+            "enable_low_stock": true,
+            "enable_selling_fast": true,
+            "low_stock_threshold": 20
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -46,20 +70,75 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
         "icon_with_text_FaUfAC": {
           "type": "icon-with-text",
           "settings": {
             "layout": "horizontal",
-            "icon_1": "heart",
-            "heading_1": "30 Day Guarantee",
-            "icon_2": "return",
-            "heading_2": "Hassle-free returns",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/online-shopping_1.png",
+            "heading_1": "Secure Checkout",
+            "icon_2": "none",
+            "image_2": "shopify://shop_images/deadline.png",
+            "heading_2": "Fast & Tracked Shipping",
             "icon_3": "truck",
-            "heading_3": "Free Shipping"
+            "image_3": "shopify://shop_images/30-days.png",
+            "heading_3": "30-Day Guarantee",
+            "icon_4": "none",
+            "image_4": "shopify://shop_images/support.png",
+            "heading_4": "Supports African Artists",
+            "icon_5": "none",
+            "image_5": "shopify://shop_images/rate.png",
+            "heading_5": "Customer Rating",
+            "icon_6": "none",
+            "heading_6": ""
+          }
+        },
+        "payment_icons_EzqdTK": {
+          "type": "payment_icons",
+          "settings": {
+            "heading": "",
+            "alignment": "left",
+            "icon_size": "medium"
+          }
+        },
+        "reviews_slider_WBDF8b": {
+          "type": "reviews_slider",
+          "settings": {
+            "heading": "",
+            "review_1_author": "Nicholas S",
+            "review_1_rating": 5,
+            "review_1_body": "This feels like owning a story, not just a print.",
+            "review_1_image": "shopify://shop_images/user.png",
+            "review_2_author": "Maria L",
+            "review_2_rating": 5,
+            "review_2_body": "Effortlessly attention-grabbing.",
+            "review_2_image": "shopify://shop_images/user.png",
+            "review_3_author": "Kelvin O",
+            "review_3_rating": 5,
+            "review_3_body": "The aura of this artwork is unmatched.",
+            "review_3_image": "shopify://shop_images/user.png",
+            "review_4_author": "Joyce J",
+            "review_4_rating": 5,
+            "review_4_body": "I respect brands that support real causes, and this one does it authentically.",
+            "review_4_image": "shopify://shop_images/user.png",
+            "review_5_author": "Hazel G",
+            "review_5_rating": 5,
+            "review_5_body": "Minimal effort to hang, maximum impact on the room.",
+            "review_5_image": "shopify://shop_images/user.png"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "collapsible_tab_NgcVyn": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Description",
+            "icon": "clipboard",
+            "content": "<p>{{ product.description }}</p>",
+            "page": ""
           }
         },
         "collapsible_tab_gjdbUn": {
@@ -105,9 +184,15 @@
         "vendor",
         "variant_picker",
         "quantity_selector",
+        "inventory_tJtzXm",
+        "countdown_timer_t9WeRg",
+        "urgency_jQhr78",
         "buy_buttons",
-        "description",
         "icon_with_text_FaUfAC",
+        "payment_icons_EzqdTK",
+        "reviews_slider_WBDF8b",
+        "description",
+        "collapsible_tab_NgcVyn",
         "collapsible_tab_gjdbUn",
         "collapsible_tab_PpxwQb",
         "collapsible_tab_f7UWTn",
@@ -115,6 +200,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "enable_sticky_add_to_cart_mobile": true,
         "color_scheme": "scheme-1",
         "media_size": "medium",
         "constrain_to_viewport": true,

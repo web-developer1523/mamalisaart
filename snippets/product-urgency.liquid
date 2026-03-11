@@ -1,9 +1,9 @@
 {% comment %}
   Renders light urgency messaging for product page (cold traffic conversion).
-  Options: Limited Edition, Only X left in stock, Popular - Selling Fast.
+  Options: Limited Edition (product tag: limited), Only X left in stock, Popular - Selling Fast (product tag: popular).
 
   Accepts:
-  - block: Block with settings (enable_limited_edition, enable_low_stock, enable_selling_fast, low_stock_threshold)
+  - block: Block with settings (enable_low_stock, low_stock_threshold)
   - product: Product object
 
   Usage:
@@ -18,8 +18,14 @@
   if block.settings.enable_low_stock and inv_managed == 'shopify' and inv_qty != nil and inv_qty > 0 and inv_qty <= threshold
     assign show_low_stock = true
   endif
-  assign has_limited = block.settings.enable_limited_edition
-  assign has_selling_fast = block.settings.enable_selling_fast
+  assign has_limited = false
+  assign has_selling_fast = false
+  if product.tags contains 'limited'
+    assign has_limited = true
+  endif
+  if product.tags contains 'popular'
+    assign has_selling_fast = true
+  endif
   assign any_visible = false
   if has_limited or show_low_stock or has_selling_fast
     assign any_visible = true
@@ -29,12 +35,29 @@
 <div class="product-urgency product__urgency" data-urgency-block-id="{{ block.id }}" {{ block.shopify_attributes }}>
   <style>
     .product-urgency { margin: 0.75rem 0; padding: 0.5rem 0; color: rgb(var(--color-foreground)); }
-    .product-urgency__list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; flex-direction: column; gap: 0.5rem; }
-    .product-urgency__item { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; opacity: 0.95; color: inherit; text-decoration: none; }
+    .product-urgency__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+    .product-urgency__item { display: inline-flex; align-items: center; gap: 1rem; font-size: 14px; opacity: 1; color: #000;justify-content: flex-start; text-decoration: none; }
     .product-urgency__item .product-urgency__icon { flex-shrink: 0; }
     .product-urgency__item--low_stock { color: rgb(180, 100, 0) !important; }
     .product-urgency__item--limited_edition .product-urgency__icon,
-    .product-urgency__item--selling_fast .product-urgency__icon { opacity: 0.9; }
+    .product-urgency__item--selling_fast .product-urgency__icon { opacity: 1;font-size: 18px; }
+    .product-urgency.product__urgency {
+      margin-bottom: 0px;
+  }
+  .product-urgency__item span {
+    font-size: 14px;
+}
+.product-urgency.product__urgency {
+  margin-bottom: -10px;
+  margin-top: 0px;
+}
+@media only screen and (max-width: 575px) {
+  .product-urgency__list {
+    grid-template-columns: repeat(1, 1fr);
+
+}
+}
+
   </style>
   <ul class="product-urgency__list" role="list">
     {%- if has_limited -%}

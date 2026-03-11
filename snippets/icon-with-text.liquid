@@ -211,12 +211,17 @@ li.icon-with-text__item {
   width: 100% !important;
 }
 .icon-with-text--horizontal li img {
-  height: 45px;
-  width: 45px;
+  height: 35px;
+  width: 35px;
   object-fit: cover;
   margin:0px;
 }
 .icon-with-text--horizontal li span {
 text-align: left !important;
+}
+@media only screen and (max-width: 575px) {
+  .icon-with-text--horizontal {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 </style>

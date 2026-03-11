@@ -1,11 +1,17 @@
 {% comment %}
   Renders a countdown timer to a single end date (end of day).
-  Accepts: block with setting countdown_end_date (YYYY-MM-DD).
+  Uses product metafield: custom.countdown_timer (Date type).
 
-  Usage: {% render 'product-countdown-timer', block: block %}
+  Accepts: block (for shopify_attributes), product.
+
+  Usage: {% render 'product-countdown-timer', block: block, product: product %}
 {% endcomment %}
-{%- assign end_date = block.settings.countdown_end_date | strip -%}
-{%- if end_date != blank -%}
+{%- assign metafield_date = product.metafields.custom.countdown_timer.value -%}
+{%- if metafield_date != blank -%}
+{%- assign end_date = metafield_date | date: '%Y-%m-%d' -%}
+{%- if end_date == blank -%}
+  {%- assign end_date = metafield_date | strip -%}
+{%- endif -%}
 {%- assign end_iso = end_date | append: 'T23:59:59' -%}
 {%- assign end_date_formatted = end_date | date: '%B %d, %Y' -%}
 {%- if end_date_formatted == blank -%}
@@ -27,3 +33,18 @@
   </p>
 </div>
 {%- endif -%}
+<style>
+  span.product-countdown-timer__icon {
+    font-size: 24px;
+}
+  .product__countdown-timer{
+    margin:0px !important;
+  }
+  .product-countdown-timer__text{
+    font-size: 14px !important;
+  }
+  .product-countdown-timer__value {
+    font-weight: 500;
+    color: red;
+}
+</style>

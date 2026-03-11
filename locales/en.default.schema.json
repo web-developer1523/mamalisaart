@@ -2414,6 +2414,41 @@
               "info": "Format: YYYY-MM-DD (e.g. 2026-12-31). Countdown ends at 11:59 PM."
             }
           }
+        },
+        "reviews_slider": {
+          "name": "Reviews slider",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "author": {
+              "label": "Reviewer name"
+            },
+            "rating": {
+              "label": "Rating (stars)"
+            },
+            "body": {
+              "label": "Review text"
+            },
+            "image": {
+              "label": "Image"
+            },
+            "review_1_header": {
+              "content": "Review 1"
+            },
+            "review_2_header": {
+              "content": "Review 2"
+            },
+            "review_3_header": {
+              "content": "Review 3"
+            },
+            "review_4_header": {
+              "content": "Review 4"
+            },
+            "review_5_header": {
+              "content": "Review 5"
+            }
+          }
         }
       },
       "settings": {

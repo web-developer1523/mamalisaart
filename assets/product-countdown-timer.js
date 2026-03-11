@@ -24,8 +24,8 @@
         var hh = pad(h);
         var mm = pad(m);
         var ss = pad(s);
-        if (d > 0) el.textContent = d + 'd ' + hh + ':' + mm + ':' + ss;
-        else el.textContent = hh + ':' + mm + ':' + ss;
+        if (d > 0) el.textContent = d + 'd ' + hh + ':Hr ' + mm + ':Min ' + ss + ':Sec';
+        else el.textContent = hh + ':Hr ' + mm + ':Min ' + ss + ':Sec';
       }
       update();
       setInterval(update, 1000);

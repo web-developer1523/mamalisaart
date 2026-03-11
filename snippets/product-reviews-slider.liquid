@@ -1,0 +1,231 @@
+{% comment %}
+  Product reviews slider - shows 4-5 reviews in a Slick carousel.
+  Requires: block (with settings heading, review_1_author through review_5_author, review_1_rating through review_5_rating, review_1_body through review_5_body)
+{% endcomment %}
+{%- assign slider_id = 'ProductReviewsSlider-' | append: block.id -%}
+
+{%- liquid
+  assign review_count = 0
+  assign r1 = block.settings.review_1_body
+  assign r2 = block.settings.review_2_body
+  assign r3 = block.settings.review_3_body
+  assign r4 = block.settings.review_4_body
+  assign r5 = block.settings.review_5_body
+  if r1 != blank
+    assign review_count = review_count | plus: 1
+  endif
+  if r2 != blank
+    assign review_count = review_count | plus: 1
+  endif
+  if r3 != blank
+    assign review_count = review_count | plus: 1
+  endif
+  if r4 != blank
+    assign review_count = review_count | plus: 1
+  endif
+  if r5 != blank
+    assign review_count = review_count | plus: 1
+  endif
+-%}
+
+{%- if review_count > 0 -%}
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  {{ 'component-rating.css' | asset_url | stylesheet_tag }}
+
+  <div class="product-reviews-slider" {{ block.shopify_attributes }}>
+    {%- if block.settings.heading != blank -%}
+      <h3 class="product-reviews-slider__heading">{{ block.settings.heading }}</h3>
+    {%- endif -%}
+    <div class="product-reviews-slider__slider" id="{{ slider_id }}">
+      {%- for i in (1..5) -%}
+        {%- assign author_key = 'review_' | append: i | append: '_author' -%}
+        {%- assign rating_key = 'review_' | append: i | append: '_rating' -%}
+        {%- assign body_key = 'review_' | append: i | append: '_body' -%}
+        {%- assign image_key = 'review_' | append: i | append: '_image' -%}
+        {%- assign author = block.settings[author_key] -%}
+        {%- assign rating = block.settings[rating_key] | default: 5 -%}
+        {%- assign body = block.settings[body_key] -%}
+        {%- assign review_image = block.settings[image_key] -%}
+        {%- if body != blank -%}
+          <div class="product-reviews-slider__slide">
+            <div class="product-reviews-slider__card">
+              <div class="product-reviews-slider__image-wrapper">
+                {%- if review_image != blank -%}
+                  <img
+                    src="{{ review_image | image_url: width: 120 }}"
+                    alt="{{ author | default: 'Review' | escape }}"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                    class="product-reviews-slider__image"
+                  >
+                {%- else -%}
+                  <span class="product-reviews-slider__avatar-placeholder" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="8" r="3.5"/>
+                      <path d="M5 20a7 7 0 0 1 14 0"/>
+                    </svg>
+                  </span>
+                {%- endif -%}
+              </div>
+              <div class="product-reviews-slider__content">
+                <div class="product-reviews-slider__top">
+                  <div class="product-reviews-slider__stars rating" role="img" aria-label="{{ rating }} out of 5 stars">
+                    <span class="rating-star product-reviews-slider__star" style="--rating: {{ rating }}; --rating-max: 5; --rating-decimal: 0;"></span>
+                  </div>
+                </div>
+                <p class="product-reviews-slider__body">{{ body }}</p>
+                {%- if author != blank -%}
+                  <cite class="product-reviews-slider__author">{{ author | escape }}</cite>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <style>
+    span.rating-star.product-reviews-slider__star {
+      font-size: 24px;
+  }
+    .product-reviews-slider {
+      margin-top: 1.5rem;
+      padding: 0 1rem;
+      position: relative;
+    }
+    .product-reviews-slider__heading {
+      margin: 0 0 1.25rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .product-reviews-slider__slider { margin: 0 -0.25rem; }
+    .product-reviews-slider__slide { padding: 0 0.25rem; outline: none; }
+    .product-reviews-slider__card {
+      background: #fff;
+      padding: 0.5rem 2rem 0.5rem;
+      min-height: 140px;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      justify-content: flex-start;
+  }
+    .product-reviews-slider__image-wrapper {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: rgba(var(--color-foreground), 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .product-reviews-slider__image {
+      width: 56px;
+      height: 56px;
+      object-fit: cover;
+    }
+    .product-reviews-slider__avatar-placeholder {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(var(--color-foreground), 0.35);
+    }
+    .product-reviews-slider__avatar-placeholder svg {
+      width: 28px;
+      height: 28px;
+    }
+    .product-reviews-slider__content { min-width: 0; flex: 1; }
+    .product-reviews-slider__top { margin-bottom: 0.5rem; }
+    .product-reviews-slider__stars { display: inline-block; margin: 0; }
+    .product-reviews-slider__star { --letter-spacing: 0.1; --font-size: 1.5; --color-rating-star: #f1c645; }
+    .product-reviews-slider__body {
+      margin: 0 0 0.625rem;
+      font-size: 14px;
+      line-height: 1.55;
+      color: rgba(var(--color-foreground), 0.9);
+    }
+    .product-reviews-slider__author {
+      font-size: 14px;
+      font-style: normal;
+      color: rgba(var(--color-foreground), 0.6);
+    }
+    .product-reviews-slider .slick-prev,
+    .product-reviews-slider .slick-next {
+      width: 20px;
+      height: 20px;
+      z-index: 2;
+      {% comment %} background: rgb(var(--color-foreground)); {% endcomment %}
+      border-radius: 50%;
+      border: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    {% comment %} .product-reviews-slider .slick-prev:hover,
+    .product-reviews-slider .slick-next:hover {
+      opacity: 1;
+      transform: unset;
+    } {% endcomment %}
+    .product-reviews-slider .slick-prev { left: 0; }
+    .product-reviews-slider .slick-next { right: 0; }
+    .product-reviews-slider .slick-prev:before,
+    .product-reviews-slider .slick-next:before {
+      font-size: 18px;
+      color: #000;
+      opacity: 1;
+    }
+    .product-reviews-slider .slick-dots {
+      {% comment %} margin-top: 1.25rem; {% endcomment %}
+      position: relative;
+      bottom: auto;
+    }
+    .product-reviews-slider .slick-dots li {
+      margin: 0 4px;
+    }
+    .product-reviews-slider .slick-dots li button:before {
+      font-size: 8px;
+      color: rgba(var(--color-foreground), 0.25);
+      opacity: 1;
+    }
+    .product-reviews-slider .slick-dots li.slick-active button:before {
+      color: rgb(var(--color-foreground));
+      opacity: 1;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    (function() {
+      var sliderId = '{{ slider_id }}';
+      function init() {
+        if (!window.jQuery || !window.jQuery.fn.slick) return;
+        var $ = window.jQuery;
+        var $slider = $('#' + sliderId);
+        if (!$slider.length) return;
+        if ($slider.hasClass('slick-initialized')) $slider.slick('unslick');
+        $slider.slick({
+          dots: false,
+          arrows: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          responsive: [
+            { breakpoint: 750, settings: { arrows: true, dots: false } }
+          ]
+        });
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        setTimeout(init, 50);
+      }
+    })();
+  </script>
+{%- endif -%}
