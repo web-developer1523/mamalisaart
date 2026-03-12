@@ -20,10 +20,10 @@
   endif
   assign has_limited = false
   assign has_selling_fast = false
-  if product.tags contains 'limited'
+  if block.settings.enable_limited_edition and product.tags contains 'limited'
     assign has_limited = true
   endif
-  if product.tags contains 'popular'
+  if block.settings.enable_selling_fast and product.tags contains 'popular'
     assign has_selling_fast = true
   endif
   assign any_visible = false
